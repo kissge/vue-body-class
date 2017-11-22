@@ -1,11 +1,11 @@
 {
-  "name": "vue-body-class",
+  "name": "vue-html-class",
   "version": "2.0.0-beta.2",
-  "description": "Control you body classes easily with vue-router",
+  "description": "Control you html classes easily with vue-router",
   "main": "./dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nikolaynesov/vue-body-class"
+    "url": "https://github.com/kissge/vue-html-class"
   },
   "keywords": [
     "vue",
@@ -14,12 +14,12 @@
     "body",
     "class"
   ],
-  "author": "Nikolay Nesov",
+  "author": "Yuto Kisuge",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nikolaynesov/vue-body-class/issues"
+    "url": "https://github.com/kissge/vue-html-class/issues"
   },
-  "homepage": "https://github.com/nikolaynesov/vue-body-class#readme",
+  "homepage": "https://github.com/kissge/vue-html-class#readme",
   "scripts": {
     "build": "babel source --presets babel-preset-es2015 --out-dir dist",
     "prepublish": "npm run build"

@@ -1,7 +1,7 @@
-class VueBodyClassController {
+class VueHtmlClassController {
 
     init(router) {
-        this.bodyClass = document.body.className;
+        this.htmlClass = document.documentElement.className;
         this.router    = router;
     }
 
@@ -38,7 +38,7 @@ class VueBodyClassController {
 
             }
 
-            document.body.className = (this.bodyClass + additionalClassName).trim();
+            document.documentElement.className = (this.htmlClass + additionalClassName).trim();
 
             next();
 
@@ -81,7 +81,7 @@ class VueBodyClassController {
 
     getClassForRoute(route) {
 
-        return route.meta ? route.meta.bodyClass : null;
+        return route.meta ? route.meta.htmlClass : null;
 
     }
 
@@ -91,16 +91,16 @@ class VueBodyClassController {
 
         if (routeClass) {
 
-            let routeBodyClass = routeClass.replace(/^!/, '');
+            let routeHtmlClass = routeClass.replace(/^!/, '');
 
             if (routeClass.indexOf('!') === 0) {
 
-                className = " " + routeBodyClass;
+                className = " " + routeHtmlClass;
 
             }
             else {
 
-                className += " " + routeBodyClass;
+                className += " " + routeHtmlClass;
 
             }
 
@@ -112,12 +112,12 @@ class VueBodyClassController {
 
 }
 
-let VueBodyClass = new VueBodyClassController()
+let VueHtmlClass = new VueHtmlClassController()
 
-VueBodyClass.install = (Vue, router) => {
+VueHtmlClass.install = (Vue, router) => {
 
-    VueBodyClass.init(router);
+    VueHtmlClass.init(router);
 
 }
 
-export default VueBodyClass;
+export default VueHtmlClass;
