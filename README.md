@@ -17,7 +17,7 @@ Control your page html classes with vue-router easily:
 
 ## Installation
 
-`npm install vue-html-class --save`
+`npm install kissge/vue-html-class --save`
 
 ## Get started
 
